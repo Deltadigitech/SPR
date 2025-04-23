@@ -1,0 +1,185 @@
+/*  Upload CSS  */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+    overflow-x: hidden; /* Removes horizontal scrollbar */
+}
+
+/* Hide Vertical Scrollbar */
+html {
+    scrollbar-width: none; /* Firefox */
+}
+
+html::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+}
+
+/* Header */
+header {
+    background-color: #ffffff;
+    padding: 15px 0;
+    text-align: center;
+}
+
+.header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 220px;
+    margin-right: 10px;
+}
+
+.company-name {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Main Content */
+.content {
+    text-align: center;
+    padding: 40px;
+    flex-grow: 1;
+}
+
+.description {
+    color: #555;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* Upload Container */
+.upload-container {
+    background-color: #fff;
+    width: 80%;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.upload-container h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.upload-container input[type="file"] {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.upload-container button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #FF0000;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.upload-container button:hover {
+    background-color: #FF0000;
+}
+
+.back-link {
+    display: block;
+    margin-top: 15px;
+    color: #FF0000;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    color: #FF0000;
+    font-weight: bold;
+}
+
+footer a {
+    color: #FF0000;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Chatbot CSS */
+/* Bot message styling */
+.bot-message {
+    background-color: #FF0000;
+    color: rgb(255, 255, 255);
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    max-width: 80%;
+    margin-right: auto;
+    margin-bottom: 0.5rem;
+    word-wrap: break-word;
+}
+
+/* User message styling */
+.user-message {
+    background-color: #e5e7eb; /* grey background */
+    color: black;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    max-width: 80%;
+    margin-left: auto;
+    margin-bottom: 0.5rem;
+    word-wrap: break-word;
+}
+
+/* Chat box styling */
+#chat-box {
+    scrollbar-width: thin;
+    scrollbar-color: #FF0000 #e5e7eb;
+}
+
+#chat-box::-webkit-scrollbar {
+    width: 8px;
+}
+
+#chat-box::-webkit-scrollbar-track {
+    background: #e5e7eb;
+}
+
+#chat-box::-webkit-scrollbar-thumb {
+    background-color: #FF0000;
+    border-radius: 4px;
+}
+
+/* Input field focus styling */
+#user-input:focus {
+    outline: none;
+    border-color: #FF0000;
+    box-shadow: 0 0 0 2px rgba(252, 194, 17, 0.2);
+}

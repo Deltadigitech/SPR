@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat History</title>
+    <link rel="icon" href="https://www.sprbuilders.in/img/logo/logo-spr.svg" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-green-50 min-h-screen flex flex-col items-center text-white-900">
+
+    <!-- Header with Centered Logo -->
+    <header class="w-full py-4 px-8 bg-[#FFFFFF] shadow-md flex justify-center">
+        <img src="https://www.sprbuilders.in/img/logo/logo-spr.svg" alt="SPR Builders" class="h-12">
+    </header>
+
+    <!-- Chat History Title -->
+    <div class="text-center mt-6">
+        <h2 class="text-3xl font-bold text-gray-700">Chat Histories</h2>
+        <p class="mt-2 text-gray-600 text-lg">View recent conversations with our AI chatbot</p>
+    </div>
+
+    <!-- Chat History Table Container (Now fits the table width properly) -->
+    <div class="w-full max-w-6xl bg-white shadow-lg rounded-lg p-6 mt-6 border border-white-200 overflow-x-auto">
+        <table class="w-full border-collapse">
+            <thead>
+                <tr class="bg-[#FF0000] text-white">
+                    <th class="p-4 text-left font-semibold">Timestamp</th>
+                    <th class="p-4 text-left font-semibold">User Message</th>
+                    <th class="p-4 text-left font-semibold">Bot Response</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for entry in chat_entries %}
+                <tr class="border-b hover:bg-gray-50">
+                    <td class="p-4 align-top w-1/5">{{ entry.timestamp }}</td>
+                    <td class="p-4 align-top w-1/4">{{ entry.user_message }}</td>
+                    <td class="p-4 align-top w-1/2 whitespace-normal break-words">{{ entry.bot_response | safe }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Footer -->
+    <footer class="w-full text-center py-4 mt-6 text-gray-700">
+        <span class="font-bold text-[#FF0000]">Powered by</span> 
+        <a href="https://www.sprbuilders.in/" class="text-[#FF0000] font-bold hover:underline">www.sprbuilders.in</a>
+    </footer>
+
+</body>
+</html>
